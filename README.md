@@ -10,13 +10,28 @@ Quantum Information is enclosed in amplitudes of basis states, so we do not want
 Since unitaries are inversable, we can always proceed back to the initial state by applying $U^\dagger $
 
 ## Demos
-To demonstrate the precedure, I show the compression of $\ket{W_8}$ state. Since there are 8 basis states in the superposition, it can be compressed into $\log_{2}(8) = 3$ qubit state. The transformation $U$ must satisfy:
+To demonstrate the precedure, I show the compression of $\ket{W_8}$ state using Qiskit. Since there are 8 basis states in the superposition, it can be compressed into $\log_{2}(8) = 3$ qubit state. The transformation $U$ must satisfy:
 
 $U\frac{1}{\sqrt{8}}\sum\ket{2^{i}} = \frac{1}{\sqrt{8}}\ket{00000} \otimes \sum\ket{i}$, <br />
 where i ranges from 0 to 7 in my case.
 
-# Demo 1
+### Demo 1
 It is relatively easy to eyeball the right sequence of gates to compress $\ket{W_8}$. In the first demo, I came up with the following circuit:
+<img width="700" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/fc92da36-c759-4d58-8d9c-baecd52c40f1">
+
+Here, the first block of the circuit evolves $\ket{0}^{\otimes8}$ to $\ket{W_8}$ according to the method described in (2). The probability distributions before and after applying all the gates after the first barrier are:
+
+ $\ket{W_8}$ (10000 runs)|  Compressed state (10000 runs)
+:-------------------------:|:-------------------------:
+<img width="473" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/e606c836-2354-43cf-8404-d22e5cfd1727"> | <img width="475" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/9f701e83-440b-40c1-8801-28ee05c91ee4">
+
+### Demo 2
+In the second demo, I only used CNOT and Toffoli gates for compression:
+<img width="700" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/811b0404-8995-490d-b211-8b58bf22ac74"> <br />
+The probability distributions before and after applying all the gates after the first barrier are:
+ $\ket{W_8}$ (10000 runs) | Compressed state (10000 runs)
+:-------------------------:|:-------------------------:
+<img width="470" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/4b8a9171-b051-4058-9843-0375638dba55">  |
 
 
 ## Acknowledgements

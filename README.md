@@ -23,7 +23,9 @@ Here, the first block of the circuit evolves $\ket{0}^{\otimes8}$ to $\ket{W_8}$
 
  $\ket{W_8}$ (10000 runs)|  Compressed state (10000 runs)
 :-------------------------:|:-------------------------:
-<img width="473" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/e606c836-2354-43cf-8404-d22e5cfd1727"> | <img width="475" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/9f701e83-440b-40c1-8801-28ee05c91ee4">
+<img width="473" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/e606c836-2354-43cf-8404-d22e5cfd1727"> | <img width="475" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/9f701e83-440b-40c1-8801-28ee05c91ee4"> <br />
+
+After the compression, only qubits 5,6, and 7 are used while 0,1,2,3,4 are remained in $\ket{0}$ and are ready to be utilized further.
 
 ### Demo 2
 In the second demo, I only used CNOT and Toffoli gates for compression:
@@ -31,8 +33,12 @@ In the second demo, I only used CNOT and Toffoli gates for compression:
 The probability distributions before and after applying all the gates after the first barrier are:
  $\ket{W_8}$ (10000 runs) | Compressed state (10000 runs)
 :-------------------------:|:-------------------------:
-<img width="470" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/4b8a9171-b051-4058-9843-0375638dba55">  |
+<img width="470" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/4b8a9171-b051-4058-9843-0375638dba55">  | <img width="465" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/2d5207f1-0933-46e0-8f78-eb2e2141051f"> <br />
 
+After the compression, only qubits 1,3, and 7 are used while 2,4,5,6 are remained in $\ket{0}$ and 0 is in $\ket{1}$ (which can be easily changed to 0 by applying X gate)
+
+## Further Research
+My theory is that the compression can be done only with X, CNOT, and Toffoli
 
 ## Acknowledgements
 1) https://doi.org/10.48550/arXiv.1612.02806

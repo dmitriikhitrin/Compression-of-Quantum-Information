@@ -16,7 +16,7 @@ $U\frac{1}{\sqrt{8}}\sum\ket{2^{i}} = \frac{1}{\sqrt{8}}\ket{00000} \otimes \sum
 where i ranges from 0 to 7 in my case.
 
 ### Demo 1
-It is relatively easy to eyeball the right sequence of gates to compress $\ket{W_8}$. In the first demo, I came up with the following circuit:
+It is relatively easy to eyeball the right sequence of gates to compress $\ket{W_8}$. In the first demo, I came up with the following circuit: <br />
 <img width="700" alt="image" src="https://github.com/dmitriikhitrin/Compression-of-Quantum-Information/assets/122756262/fc92da36-c759-4d58-8d9c-baecd52c40f1">
 
 Here, the first block of the circuit evolves $\ket{0}^{\otimes8}$ to $\ket{W_8}$ according to the method described in (2). The probability distributions before and after applying all the gates after the first barrier are:
